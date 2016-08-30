@@ -1,0 +1,78 @@
+/************************************************************************
+* Toolbar.rc - demonstration program resource file                      *
+* --------------------------------------------------------------------- *
+* Demonstrate a toolbar class and simple graphical display.             *
+*                                                                       *
+* Written by: Barry Lay                                                 *
+* Date:       16 September 1994                                         *
+*                                                                       *
+************************************************************************/
+
+#include <os2.h>
+#include "toolbar.h"
+
+STRINGTABLE
+BEGIN
+   WND_MAIN,         "Simple IUCL Toolbar Application"
+
+   MICRO_DEFAULT,    "Use cntl-F4 to close window"
+
+   MI_SPEED,         "Control line flash speed"
+   MI_HALF,          "Half speed"
+   MI_STOP,          "Stop"
+   MI_GO,            "Go"
+   MI_TWICE,         "Twice speed"
+
+   MI_LINES,         "Control number of lines"
+   MI_LESS,          "Less lines"
+   MI_MORE,          "More lines"
+
+   MI_BACKGROUND,    "Control background colour"
+   MI_BLACK,         "Black background"
+   MI_WHITE,         "White background"
+
+   TBS_1,            "Half speed"
+   TBS_2,            "Stop"
+   TBS_3,            "Go"
+   TBS_4,            "Twice speed"
+
+   TBL_1,            "Less lines"
+   TBL_2,            "More lines"
+
+   TBB_1,            "Black background"
+   TBB_2,            "White background"
+END
+
+MENU WND_MAIN
+BEGIN
+   SUBMENU  "~Speed",            MI_SPEED
+   BEGIN
+      MENUITEM "~Half speed",    MI_HALF
+      MENUITEM "~Stop",          MI_STOP
+      MENUITEM "~Go",            MI_GO
+      MENUITEM "~Twice speed",   MI_TWICE
+   END
+   SUBMENU  "~Lines",            MI_LINES
+   BEGIN
+      MENUITEM "~Less lines",    MI_LESS
+      MENUITEM "~More lines",    MI_MORE
+   END
+   SUBMENU  "~Background",       MI_BACKGROUND
+   BEGIN
+      MENUITEM "~Black",         MI_BLACK
+      MENUITEM "~White",         MI_WHITE
+   END
+END
+
+BITMAP   TBS_1 tbs1.bmp
+BITMAP   TBS_2 tbs2.bmp
+BITMAP   TBS_3 tbs3.bmp
+BITMAP   TBS_4 tbs4.bmp
+
+BITMAP   TBL_1 tbl1.bmp
+BITMAP   TBL_2 tbl2.bmp
+
+BITMAP   TBB_1 tbb1.bmp
+BITMAP   TBB_2 tbb2.bmp
+
+

@@ -1,0 +1,116 @@
+# IBM Developer's Workframe/2 Make File Creation run at 23:35:39 on 09/15/94
+
+# Make File Creation run in directory:
+#   E:\DEVEL\TOOLBAR;
+
+# Assumed INCLUDE environment variable path:
+#   C:\MUGLIB;
+#   E:\SQLLIB;
+#   E:\TOOLKT21\CPLUS\OS2H;
+#   E:\TOOLKT21\C\OS2H;
+#   E:\TOOLKT21\C\OS2H\VDD;
+#   E:\TOOLKT21\ASM\OS2INC;
+#   E:\DEVEL\TOOLBAR;
+#   E:\IBMCPP\INCLUDE;
+#   E:\IBMCPP\IBMCLASS;
+#   E:\C600\INCLUDE;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+TOOLBAR.RES:  TOOLBAR.RC  \
+#  {$(INCLUDE002)}OS2.H  \
+   {$(INCLUDE002)}TOOLBAR.H  \
+   TBS1.BMP  \
+   TBS2.BMP  \
+   TBS3.BMP  \
+   TBS4.BMP  \
+   TBL1.BMP  \
+   TBL2.BMP  \
+   TBB1.BMP  \
+   TBB2.BMP  \
+   TOOLBAR.MAK
+
+AINFOA.OBJ:  AINFOA.CPP  \
+#  {$(INCLUDE000)}ireslib.hpp  \
+#  {$(INCLUDE000)}iframe.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}ainfoa.hpp  \
+#    {$(INCLUDE000)}iinfoa.hpp  \
+     {$(INCLUDE001)}atimehdr.hpp  \
+#      {$(INCLUDE000)}ihandler.hpp  \
+     {$(INCLUDE001)}amhlphdr.hpp  \
+#      {$(INCLUDE000)}ihandler.hpp  \
+   TOOLBAR.MAK
+
+AMHLPHDR.OBJ:  AMHLPHDR.CPP  \
+#  {$(INCLUDE000)}iwindow.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}amhlphdr.hpp  \
+#    {$(INCLUDE000)}ihandler.hpp  \
+   TOOLBAR.MAK
+
+AMMVEHDR.OBJ:  AMMVEHDR.CPP  \
+#  {$(INCLUDE000)}iwindow.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}ammvehdr.hpp  \
+#    {$(INCLUDE000)}ihandler.hpp  \
+   TOOLBAR.MAK
+
+ATIMEHDR.OBJ:  ATIMEHDR.CPP  \
+#  {$(INCLUDE000)}ithread.hpp  \
+#  {$(INCLUDE000)}iwindow.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}atimehdr.hpp  \
+#    {$(INCLUDE000)}ihandler.hpp  \
+   TOOLBAR.MAK
+
+ATOOLBAR.OBJ:  ATOOLBAR.CPP  \
+#  {$(INCLUDE000)}igraphbt.hpp  \
+#  {$(INCLUDE000)}istattxt.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}atoolbar.hpp  \
+#    {$(INCLUDE000)}isetcv.hpp  \
+     {$(INCLUDE001)}ammvehdr.hpp  \
+#      {$(INCLUDE000)}ihandler.hpp  \
+   TOOLBAR.MAK
+
+TOOLBAR.OBJ:  TOOLBAR.CPP  \
+#  {$(INCLUDE000)}iapp.hpp  \
+#  {$(INCLUDE000)}istattxt.hpp  \
+#  {$(INCLUDE000)}istring.hpp  \
+#  {$(INCLUDE000)}ibmpctl.hpp  \
+#  {$(INCLUDE000)}iinfoa.hpp  \
+#  {$(INCLUDE000)}ifont.hpp  \
+#  {$(INCLUDE000)}os2.h  \
+   {$(INCLUDE001)}atimehdr.hpp  \
+#    {$(INCLUDE000)}ihandler.hpp  \
+   {$(INCLUDE001)}amhlphdr.hpp  \
+#    {$(INCLUDE000)}ihandler.hpp  \
+   {$(INCLUDE001)}atoolbar.hpp  \
+#    {$(INCLUDE000)}isetcv.hpp  \
+     {$(INCLUDE001)}ammvehdr.hpp  \
+#      {$(INCLUDE000)}ihandler.hpp  \
+   {$(INCLUDE001)}ainfoa.hpp  \
+#    {$(INCLUDE000)}iinfoa.hpp  \
+#    {$(INCLUDE001)}atimehdr.hpp  \
+#    {$(INCLUDE001)}amhlphdr.hpp  \
+   {$(INCLUDE001)}toolbar.hpp  \
+#    {$(INCLUDE000)}iframe.hpp  \
+#    {$(INCLUDE000)}icmdhdr.hpp  \
+#    {$(INCLUDE000)}imenubar.hpp  \
+#    {$(INCLUDE000)}ipainhdr.hpp  \
+#    {$(INCLUDE000)}isizehdr.hpp  \
+#    {$(INCLUDE000)}iqueue.h  \
+#    {$(INCLUDE001)}atimehdr.hpp  \
+#    {$(INCLUDE001)}amhlphdr.hpp  \
+#    {$(INCLUDE001)}atoolbar.hpp  \
+   {$(INCLUDE001)}toolbar.h  \
+   TOOLBAR.MAK
